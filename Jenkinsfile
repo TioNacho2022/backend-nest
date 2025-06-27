@@ -17,6 +17,11 @@ pipeline{
                         sh 'npm install'
                     }
                 }
+                stage("ejecucion de pruebas"){
+                    steps{
+                        sh 'npm run test:cov'
+                    }
+                }
            }
         }
 
