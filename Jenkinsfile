@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    eviroment{
+        NPM_CONFIG_CACHE= "${WORKPACE}/.npm"
+    }
 
     stages{
         stage("proceso de build y test"){
