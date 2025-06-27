@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    eviroment{
+    evironment{
         NPM_CONFIG_CACHE= "${WORKPACE}/.npm"
     }
 
