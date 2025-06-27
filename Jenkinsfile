@@ -4,8 +4,8 @@ pipeline{
     stages{
         stage('saludo a usuario'){
             steps{
-                sh 'echo "hola a todos desde pipeline"'
-                sh 'echo "saliendo de pipeline"'
+                sh 'npm ci'
+                
             }
         }
 
