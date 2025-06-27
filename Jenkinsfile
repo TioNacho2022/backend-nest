@@ -2,11 +2,19 @@ pipeline{
     agent any
 
     stages{
-        stage('saludo a usuario'){
-            steps{
-                sh 'npm ci'
-                
+        stage("proceso de build y test"){
+            agent{
+                docker{
+                    image 'node:22'
+                }
             }
+            stages{
+                stage("instalacion de dependencias"){
+                    steps{
+                        sh 'npm install'
+                    }
+                }
+           }
         }
 
     }
